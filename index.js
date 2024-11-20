@@ -13,6 +13,10 @@ app.use(cors({
   credentials: true, // Para permitir cookies o headers personalizados
 }));
 
+app.get('/',function(req, res){
+  res.status(200).json({message:"Hola desde render"});
+});
+
 app.get("/api/ping",function(req, res){
   res.status(200).json({message:"pong"})
 });
